@@ -18,13 +18,16 @@
 
           <ul class="navbar-nav flex-row flex-nowrap justify-content-end order-3">
             <li class="nav-item" v-if="user.isAuth()">
-              <router-link class="nav-link px-2 px-sm-3" v-bind:to="{name: 'Login'}">Вход</router-link>
+              <router-link class="nav-link px-2 px-sm-3" v-bind:to="{name: 'Lists'}">Мои списки</router-link>
             </li>
             <li class="nav-item" v-else>
-              <router-link class="nav-link px-2 px-sm-3" v-bind:to="{name: 'Lists'}">Мои списки</router-link>
+              <router-link class="nav-link px-2 px-sm-3" v-bind:to="{name: 'Login'}">Вход</router-link>
             </li>
 
             <li class="nav-item" v-if="user.isAuth()">
+              <router-link class="nav-link px-2 px-sm-3" v-bind:to="{name: 'Logout'}">Выйти</router-link>
+            </li>
+            <li class="nav-item" v-else>
               <router-link class="nav-link px-2 px-sm-3" v-bind:to="{name: 'Register'}">Регистрация</router-link>
             </li>
           </ul>

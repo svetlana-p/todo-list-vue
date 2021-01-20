@@ -39,8 +39,9 @@ export default {
           accessToken: 'fhdgfhjsdgg36454245#67!jfhg'
         }
         User.login(result)
-        this.$router.push('/lists')
-
+        setTimeout(() => {
+          this.$router.push('/lists')
+        }, 1500)
       }
       e.preventDefault()
     },
